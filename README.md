@@ -4,6 +4,41 @@ Unofficial documentation for ESPN's WNBA Fantasy Basketball API endpoints. This 
 
 ⚠️ **Disclaimer:** This is an unofficial, reverse-engineered API. ESPN may change or remove these endpoints without notice. Use responsibly and respect ESPN's Terms of Service.
 
+## 📦 Installation
+
+```bash
+npm install wnba-fantasy-api
+```
+
+## 🚀 Quick Start
+```bash
+javascriptimport { WNBAFantasyAPI } from 'wnba-fantasy-api';
+
+// Initialize API
+const api = new WNBAFantasyAPI();
+
+// Get all players
+const players = await api.getAllPlayers();
+
+// Search for players
+const searchResults = await api.searchPlayers('Wilson');
+
+// Get free agents (low ownership)
+const freeAgents = await api.getFreeAgents(10); // Under 10% owned
+
+// For private league data, provide authentication
+const authenticatedApi = new WNBAFantasyAPI({
+  espnS2: 'your_espn_s2_cookie',
+  swid: 'your_swid_cookie'
+});
+
+// Get manager's team
+const team = await authenticatedApi.getManagerTeam(leagueId, teamId);
+
+// Get all teams in league
+const allTeams = await authenticatedApi.getAllTeams(leagueId);
+```
+
 ## 🏀 Base URL
 https://lm-api-reads.fantasy.espn.com/apis/v3/games/wfba/
 
