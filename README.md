@@ -12,17 +12,26 @@ https://lm-api-reads.fantasy.espn.com/apis/v3/games/wfba/
 ### Get All WNBA Players
 ```bash
 curl "https://lm-api-reads.fantasy.espn.com/apis/v3/games/wfba/seasons/2025/players?view=players_wl&scoringPeriodId=0"
+```
 Get WNBA Team Schedules
-bashcurl "https://lm-api-reads.fantasy.espn.com/apis/v3/games/wfba/seasons/2025?view=proTeamSchedules_wl"
+```bash
+curl "https://lm-api-reads.fantasy.espn.com/apis/v3/games/wfba/seasons/2025?view=proTeamSchedules_wl"
+```
 Get Game State
-bashcurl "https://lm-api-reads.fantasy.espn.com/apis/v3/games/wfba/seasons/2025?view=kona_game_state"
+```bash
+curl "https://lm-api-reads.fantasy.espn.com/apis/v3/games/wfba/seasons/2025?view=kona_game_state"
+```
 🔒 Private League Endpoints (Authentication Required)
 Get League Rosters
-bashcurl "https://lm-api-reads.fantasy.espn.com/apis/v3/games/wfba/seasons/2025/segments/0/leagues/{LEAGUE_ID}?view=mRoster&view=mTeam" \
+```bash
+curl "https://lm-api-reads.fantasy.espn.com/apis/v3/games/wfba/seasons/2025/segments/0/leagues/{LEAGUE_ID}?view=mRoster&view=mTeam" \
   -H "Cookie: espn_s2=YOUR_ESPN_S2; SWID=YOUR_SWID"
+```
 Get League Settings & Info
-bashcurl "https://lm-api-reads.fantasy.espn.com/apis/v3/games/wfba/seasons/2025/segments/0/leagues/{LEAGUE_ID}?view=mSettings" \
+```bash
+curl "https://lm-api-reads.fantasy.espn.com/apis/v3/games/wfba/seasons/2025/segments/0/leagues/{LEAGUE_ID}?view=mSettings" \
   -H "Cookie: espn_s2=YOUR_ESPN_S2; SWID=YOUR_SWID"
+```
 📊 Key Data Points
 
 Player ownership percentages across all leagues
@@ -33,7 +42,9 @@ League settings and rules
 
 🔑 Authentication
 See authentication/cookie-setup.md for detailed instructions on obtaining ESPN cookies.
+
 📈 Contributing
 Found new endpoints? Contributions welcome! See CONTRIBUTING.md
+
 ⚖️ Legal
 This project is for educational purposes. All data belongs to ESPN. Use responsibly.
